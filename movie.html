@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Vault</title>
+    <link rel="icon" type="image/icon" href="/icon.jpg">
+</head>
+<body>
+    <header>
+
+        <h1>Movie Vault</h1>
+        <img src="icon.jpg" alt="Movie Vault Logo" class="logo ">
+        
+        <nav>
+            <ul>
+                <li><a href="movie.html">Movies</a></li>
+                <li><a href="mylist.html">My list</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="page-title">Featured Movies</h2>
+        
+        <div class="movies-container">
+            <!-- Movie 1: Redeeming Love -->
+            <section class="movie-card">
+                <div class="movie-poster" onclick="openTrailer('redeeming-love')">
+                    <img src="filmpics/RedeemingLove.jpg" alt="Redeeming Love Poster">
+                    <div class="play-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <h2>Redeeming Love</h2>
+                    <p><strong>Director:</strong> D.J. Caruso</p>
+                    <p><strong>Genre:</strong> Romance, Drama</p>
+                    <p><strong>Synopsis:</strong> A powerful retelling of the book of Hosea set in 1850s California Gold Rush, following a young woman sold into prostitution and the farmer who falls in love with her.</p>
+                    <p><strong>Cast:</strong> Abigail Cowen, Tom Lewis, Famke Janssen</p>
+                    <p><strong>Rating:</strong> PG-13</p>
+                </div>
+            </section>
+
+            <!-- Movie 2: Mona Lisa Smile -->
+            <section class="movie-card">
+                <div class="movie-poster" onclick="openTrailer('mona-lisa-smile')">
+                    <img src="filmpics/MonaLisaSmile.jpg" alt="Mona Lisa Smile Poster">
+                    <div class="play-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <h2>Mona Lisa Smile</h2>
+                    <p><strong>Director:</strong> Mike Newell</p>
+                    <p><strong>Genre:</strong> Drama, Romance</p>
+                    <p><strong>Synopsis:</strong> A free-thinking art professor teaches conservative 1950s Wellesley girls to question their traditional social roles.</p>
+                    <p><strong>Cast:</strong> Julia Roberts, Kirsten Dunst, Julia Stiles, Maggie Gyllenhaal</p>
+                    <p><strong>Rating:</strong> PG-13</p>
+                </div>
+            </section>
+
+            <!-- Movie 3: Six Triple Eight -->
+            <section class="movie-card">
+                <div class="movie-poster" onclick="openTrailer('six-triple-eight')">
+                    <img src="filmpics/sixtripleeight.jpg" alt="Six Triple Eight Poster">
+                    <div class="play-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <h2>Redeeming Love</h2>
+                    <p><strong>Director:</strong> D.J. Caruso</p>
+                    <p><strong>Genre:</strong> Romance, Drama</p>
+                    <p><strong>Synopsis:</strong> A powerful retelling of the book of Hosea set in 1850s California Gold Rush, following a young woman sold into prostitution and the farmer who falls in love with her.</p>
+                    <p><strong>Cast:</strong> Abigail Cowen, Tom Lewis, Famke Janssen</p>
+                    <p><strong>Rating:</strong> PG-13</p>
+                </div>
+            </section>
+
+            <!-- Movie 4: Four Sisters and a Wedding -->
+            <section class="movie-card">
+                <div class="movie-poster" onclick="openTrailer('four-sisters-and-a-wedding')">
+                    <img src="filmpics/foursisters.jpg" alt="Four Sisters and a Wedding Poster">
+                    <div class="play-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <h2>Four Sisters and a Wedding</h2>
+                    <p><strong>Director:</strong> D.J. Caruso</p>
+                    <p><strong>Genre:</strong> Romance, Drama</p>
+                    <p><strong>Synopsis:</strong> A powerful retelling of the book of Hosea set in 1850s California Gold Rush, following a young woman sold into prostitution and the farmer who falls in love with her.</p>
+                    <p><strong>Cast:</strong> Abigail Cowen, Tom Lewis, Famke Janssen</p>
+                    <p><strong>Rating:</strong> PG-13</p>
+                </div>
+            </section>
+
+            <!-- Movie 5: When Marnie was there -->
+            <section class="movie-card">
+                <div class="movie-poster" onclick="openTrailer('when-marnie-was-there')">
+                    <img src="filmpics/marnie.jpg" alt="When Marnie Was There Poster">
+                    <div class="play-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="movie-details">
+                    <h2>When Marnie Was There</h2>
+                    <p><strong>Director:</strong></p>
+                    <p><strong>Genre:</strong> Romance, Drama</p>
+                    <p><strong>Synopsis:</strong> A powerful retelling of the book of Hosea set in 1850s California Gold Rush, following a young woman sold into prostitution and the farmer who falls in love with her.</p>
+                    <p><strong>Cast:</strong> Abigail Cowen, Tom Lewis, Famke Janssen</p>
+                    <p><strong>Rating:</strong> PG-13</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeTrailer()">&times;</span>
+            <video id="trailerVideo" controls>
+                <source id="videoSource" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Movie Vault. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
