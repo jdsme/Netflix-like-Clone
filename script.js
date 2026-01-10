@@ -5,6 +5,11 @@ const trailers = {
     'six-triple-eight': 'trailers/Six-Triple-Eight.mp4',
     'four-sisters-and-a-wedding': 'trailers/FOUR-SISTERS.mp4',
     'when-marnie-was-there': 'trailers/Marnie.mp4',
+    'godzilla-x-kong-new-empire': 'trailers/Godzilla-x-Kong-New-Empire.mp4',
+    'jumanji-welcome-to-the-jungle': 'trailers/Jumanji-Welcome-to-the-Jungle.mp4',
+    'bad-boys-for-life': 'trailers/Bad-Boys-for-Life.mp4',
+    'transformers-one': 'trailers/Transformers-One.mp4',
+    'the-hangover': 'trailers/The-Hangover.mp4'
 };
 
 // Open trailer modal
