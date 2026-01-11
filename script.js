@@ -111,5 +111,35 @@ window.addEventListener('DOMContentLoaded', function() {
             button.classList.add('added');
             button.textContent = '✓';
         }
+
+
+                // Dark / Light Mode Toggle
+        // 🌙☀️ Dark / Light Mode Toggle with Icon
+        const modeToggle = document.getElementById('modeToggle');
+        const body = document.body;
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            modeToggle.textContent = '☀️';
+        } else {
+            modeToggle.textContent = '🌙';
+        }
+
+        // Toggle theme
+        modeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                modeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                modeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
     });
 });

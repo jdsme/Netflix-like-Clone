@@ -7,9 +7,150 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5; /* Light mode default */
+    color: #000000; /* Dark text for light mode */
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
     background-color: #141414;
     color: #ffffff;
-    line-height: 1.6;
+}
+
+body.dark-mode header {
+    background-color: #000000;
+}
+
+body.dark-mode .movie-card {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .movie-details p {
+    color: #b3b3b3;
+}
+
+body.dark-mode footer {
+    background-color: #000000;
+}
+
+body.dark-mode .modal {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+body.dark-mode .modal-content {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .notification {
+    background-color: #1f1f1f;
+}
+
+/* Light Mode Specific Styles */
+body:not(.dark-mode) header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark-mode) header h1 {
+    color: #e50914;
+}
+
+body:not(.dark-mode) nav a {
+    color: #333333;
+}
+
+body:not(.dark-mode) nav a:hover {
+    color: #e50914;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #e50914;
+    border-radius: 5px;
+    background-color: #e50914;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #b20710;
+    border-color: #b20710;
+    transform: translateY(-2px);
+}
+
+body:not(.dark-mode) .toggle-btn {
+    background-color: #333333;
+    border-color: #333333;
+}
+
+body:not(.dark-mode) .toggle-btn:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+body:not(.dark-mode) .page-title {
+    color: #000000;
+}
+
+body:not(.dark-mode) .movie-card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark-mode) .movie-details h2 {
+    color: #000000;
+}
+
+body:not(.dark-mode) .movie-details p {
+    color: #555555;
+}
+
+body:not(.dark-mode) .movie-details strong {
+    color: #000000;
+}
+
+body:not(.dark-mode) .add-to-list-btn,
+body:not(.dark-mode) .watch-later-btn {
+    background-color: #f0f0f0;
+    color: #000000;
+    border-color: #cccccc;
+}
+
+body:not(.dark-mode) .add-to-list-btn:hover {
+    background-color: #e50914;
+    color: #ffffff;
+    border-color: #e50914;
+}
+
+body:not(.dark-mode) .watch-later-btn:hover {
+    background-color: #404040;
+    color: #ffffff;
+    border-color: #404040;
+}
+
+body:not(.dark-mode) footer {
+    background-color: #ffffff;
+    color: #808080;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark-mode) .modal {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+body:not(.dark-mode) .modal-content {
+    background-color: #ffffff;
+}
+
+body:not(.dark-mode) .notification {
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /* Header Styles */
