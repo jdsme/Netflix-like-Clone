@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- Header / Navbar -->
+    <header>
+        <h1>MyMovies</h1>
+        <nav>
+            <ul>
+                <li>
+                    <button class="toggle-btn icon-toggle" id="modeToggle" aria-label="Toggle dark mode">🌙</button>
+                </li>  
+                <li><a href="movie.html">Movies</a></li>
+                <li><a href="mylist.html">My list</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2 class="page-title">My List</h2>
+        <div class="movies-container" id="myListContainer">
+            <!-- Movie cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Trailer Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeTrailer()">×</button>
+            <video id="trailerVideo" controls>
+                <source id="videoSource" src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Populate My List
+        const myListContainer = document.getElementById('myListContainer');
+        const myList = JSON.parse(localStorage.getItem('myMovieList')) || [];
+
+        if (myList.length === 0) {
+            myListContainer.innerHTML = "<p>You haven't added any movies yet.</p>";
+        } else {
+            myList.forEach(title => {
+                const card = document.createElement('div');
+                card.classList.add('movie-card');
+
+                card.innerHTML = `
+                    <div class="movie-poster" onclick="openTrailer('${title.toLowerCase().replace(/ /g,'-')}')">
+                        <img src="posters/${title}.jpg" alt="${title} Poster">
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                    <div class="movie-details">
+                        <h2>${title}</h2>
+                        <p><strong>Description:</strong> Some description here.</p>
+                        <div class="action-buttons">
+                            <button class="add-to-list-btn added" onclick="addToList('${title}', this)">✓</button>
+                        </div>
+                    </div>
+                `;
+
+                myListContainer.appendChild(card);
+            });
+        }
+    </script>
+
 </body>
 </html>

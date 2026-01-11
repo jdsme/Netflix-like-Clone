@@ -30,13 +30,6 @@ function openTrailer(movieId) {
     // Play the video
     video.play();
     
-    // Auto-pause after 1 minute (60 seconds)
-    setTimeout(() => {
-        if (!video.paused) {
-            video.pause();
-        }
-    }, 60000);
-    
     // Optional: Auto-close modal after video ends or after 1 minute
     video.addEventListener('ended', () => {
         closeTrailer();
@@ -111,9 +104,9 @@ window.addEventListener('DOMContentLoaded', function() {
             button.classList.add('added');
             button.textContent = '✓';
         }
+    });
 
-
-                // Dark / Light Mode Toggle
+        // Dark / Light Mode Toggle
         // 🌙☀️ Dark / Light Mode Toggle with Icon
         const modeToggle = document.getElementById('modeToggle');
         const body = document.body;
@@ -140,6 +133,5 @@ window.addEventListener('DOMContentLoaded', function() {
                 localStorage.setItem('theme', 'light');
             }
         });
-
-    });
+    
 });
