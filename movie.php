@@ -22,9 +22,9 @@
 
             </li>  
                 
-                <li><a href="movie.html">Movies</a></li>
+                <li><a href="movie.php">Movies</a></li>
                 <li><a href="mylist.html">My list</a></li>
-            </ul>/
+            </ul>
         </nav>
     </header>
 
