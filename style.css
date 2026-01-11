@@ -167,27 +167,34 @@ main {
     font-weight: 600;
 }
 
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
 /* Add to List Button */
 .add-to-list-btn {
     background-color: #2a2a2a;
     color: #ffffff;
     border: 2px solid #ffffff;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
     cursor: pointer;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 15px;
+    gap: 8px;
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .add-to-list-btn:hover {
     background-color: #ffffff;
     color: #000000;
-    transform: scale(1.1);
+    transform: translateY(-2px);
 }
 
 .add-to-list-btn.added {
@@ -198,6 +205,64 @@ main {
 .add-to-list-btn.added:hover {
     background-color: #b20710;
     border-color: #b20710;
+}
+
+.add-to-list-btn.added .btn-icon {
+    content: '✓';
+}
+
+.add-to-list-btn.added .btn-text::before {
+    content: 'Remove from ';
+}
+
+/* Watch Later Button */
+.watch-later-btn {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 2px solid #808080;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.watch-later-btn:hover {
+    background-color: #404040;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.watch-later-btn.added {
+    background-color: #ffa500;
+    border-color: #ffa500;
+    color: #000000;
+}
+
+.watch-later-btn.added:hover {
+    background-color: #ff8c00;
+    border-color: #ff8c00;
+}
+
+.watch-later-btn.added .btn-icon {
+    content: '✓';
+}
+
+.watch-later-btn.added .btn-text::before {
+    content: 'Remove from ';
+}
+
+.btn-icon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.btn-text {
+    font-size: 14px;
 }
 
 /* Modal Styles */
@@ -267,6 +332,35 @@ footer {
     margin-top: 60px;
     color: #808080;
     font-size: 14px;
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 80px;
+    right: -400px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    transition: right 0.3s ease;
+    max-width: 350px;
+    font-size: 14px;
+    border-left: 4px solid #e50914;
+}
+
+.notification.success {
+    border-left-color: #28a745;
+}
+
+.notification.info {
+    border-left-color: #17a2b8;
+}
+
+.notification.show {
+    right: 20px;
 }
 
 /* Responsive Design */
